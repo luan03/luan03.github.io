@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 218px;
     background: #f6f6f6;
+    margin-bottom: 22px;
 }
 
 .section {
@@ -17,5 +18,6 @@ body {
     width: 503px;
     height: 148px;
     border: 1px solid #f7f7f7;
+    background: #fff;
     display:block;
 }
