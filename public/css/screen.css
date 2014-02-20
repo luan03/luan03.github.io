@@ -11,3 +11,11 @@ body {
     height: 218px;
     background: #f6f6f6;
 }
+
+.section {
+    margin: 0 auto 9px auto;
+    width: 503px;
+    height: 148px;
+    border: 1px solid #f7f7f7;
+    display:block;
+}
