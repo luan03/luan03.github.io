@@ -20,4 +20,5 @@ body {
     border: 1px solid #f7f7f7;
     background: #fff;
     display:block;
+    box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.42);
 }
