@@ -16,14 +16,14 @@ body {
         linear,
         left top,
         left bottom,
-        color-stop(0, #9CBFE8),
-        color-stop(1, #BAF0FF)
+        color-stop(0, #FAC64D),
+        color-stop(1, #DE3333)
     );
-    background-image: -o-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
-    background-image: -moz-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
-    background-image: -webkit-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
-    background-image: -ms-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
-    background-image: linear-gradient(to bottom, #9CBFE8 0%, #BAF0FF 100%);
+    background-image: -o-linear-gradient(bottom, #FAC64D 0%, #DE3333 100%);
+    background-image: -moz-linear-gradient(bottom, #FAC64D 0%, #DE3333 100%);
+    background-image: -webkit-linear-gradient(bottom, #FAC64D 0%, #DE3333 100%);
+    background-image: -ms-linear-gradient(bottom, #FAC64D 0%, #DE3333 100%);
+    background-image: linear-gradient(to bottom, #FAC64D 0%, #DE3333 100%);
 
     border: 1px solid #d3d3d3;
 }
