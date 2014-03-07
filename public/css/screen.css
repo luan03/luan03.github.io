@@ -8,9 +8,22 @@ body {
 #main {
     display: block;
     width: 100%;
-    height: 218px;
+    height: 350px;
     background: #f6f6f6;
     margin-bottom: 22px;
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #9CBFE8),
+        color-stop(1, #BAF0FF)
+    );
+    background-image: -o-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
+    background-image: -moz-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
+    background-image: -webkit-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
+    background-image: -ms-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
+    background-image: linear-gradient(to bottom, #9CBFE8 0%, #BAF0FF 100%);
 }
 
 .section {
