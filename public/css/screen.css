@@ -24,6 +24,8 @@ body {
     background-image: -webkit-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
     background-image: -ms-linear-gradient(bottom, #9CBFE8 0%, #BAF0FF 100%);
     background-image: linear-gradient(to bottom, #9CBFE8 0%, #BAF0FF 100%);
+
+    border: 1px solid #d3d3d3;
 }
 
 .section {
