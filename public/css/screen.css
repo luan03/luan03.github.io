@@ -1,3 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+p {
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -26,7 +34,7 @@ body {
     padding: 15px 0 0 15px;
 }
 
-.title-post {
+.title-post-home {
     color: #666;
     text-decoration: none;
 }
@@ -49,7 +57,7 @@ body {
 }
 
 .post-javascript {
-    background-color: rgb(14, 83, 167);
+    background-color: rgb(250, 29, 0);
 }
 
 .post-css {
@@ -58,4 +66,38 @@ body {
 
 .post-html {
     background-color: rgb(14, 83, 167);
+}
+
+
+
+/* Page Posts */
+
+.page-post {
+    width:900px;
+    height: auto;
+    padding: 20px;
+    color: #666;
+}
+
+.title-post {
+    display: block;
+    font-size: 22px;
+    color: #fa1d00;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #fa1d00;
+    text-transform: uppercase;
+}
+
+.topic {
+    display: block;
+    padding: 22px 0;
+    color: #fa1d00;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.references-post {
+    color: #666;
 }
