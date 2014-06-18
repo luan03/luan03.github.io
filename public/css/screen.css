@@ -89,6 +89,12 @@ body {
     text-transform: uppercase;
 }
 
+.title-post span {
+    float: right;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
 .topic {
     display: block;
     padding: 22px 0;

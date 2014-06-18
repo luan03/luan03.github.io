@@ -9,35 +9,45 @@
     <div id="main"></div>
 
     <div class="section page-post">
-        <h2 title="Performance em Javascript" class="title-post">Performance em Javascript</h2>
+        <h2 title="Performance em Javascript" class="title-post">Performance em Javascript <span>30/04/2014</span></h2>
 
          <h3 class="topic">Boas Práticas de performance:</h3>
 
+
+         <p>
+            Hoje em dia os sites são cada vez mais dinâmicos então está cada vez mais difícil cachear informações. <br />
+            Então seguem algumas dicas básicas para você tentar melhorar a performance do seu site:
+        </p>
+
         <ul>
-            <li>Não correr imediatamente para otimização do javascript.</li>
+            <li>Não corra imediatamente para otimização do javascript.</li>
             <li>Investir a rede, DOM, imagens e outros gargalos possíveis.</li>
-            <li>Identificar o perfil da sua aplicação e a lógica do código.</li>
-            <li>Otimizar o Js quando o necessário.</li>
+            <!--li>Identifique o perfil da sua aplicação e a lógica do código que você está usando.</li-->
+            <li>Otimize o Javacsript quando o necessário.</li>
         </ul>
 
-        <p>Hoje em dia os sites são cada vez mais dinâmicos então está cada vez mais difícil cachear informações.</p>
-
-
-    <i>A primeira coisa a fazer é investigar para descobrir onde está o problema de desempenho está vindo. As causas podem ser múltiplas:</i>
+    <p>A primeira coisa a fazer é investigar e descobrir de onde problema de desempenho está vindo. As causas podem ser múltiplas:</p>
 
     <ul>
-        <li>Baseando-se muito na conexão</li>
+        <!--li>Baseando-se muito na conexão</li-->
         <li>Manipulação DOM Extensa</li>
         <li>Problemas de renderização (layout de forçado ...)</li>
         <li>io (por exemplo, o uso repetido de localStorage )</li>
     </ul>
 
-    <p>Use a guia Rede de ferramenta de desenvolvimento do seu navegador favorito. Certifique-se que os seus pedidos não têm qualquer impacto sobre a sua aplicação no início e tempo de execução. Chamadas Ajax repetidos podem abrandar aplicações também.</p>
+    <p>Use a aba <b>Network</b> de ferramenta de desenvolvimento do seu navegador favorito. Certifique-se que os seus pedidos não têm qualquer impacto sobre a sua aplicação no início e tempo de execução.</p>
+
+    <p>Chamadas Ajax repetidos podem abrandar aplicações também.</p>
 
 
     <p>Identificar manipulação DOM lento é um pouco mais difícil. A guia Timeline de ferramentas dev do Chrome pode ajudá-lo a identificar tais questões.</p>
 
     <p>Claro, você deve se familiarizar com as melhores práticas. Por exemplo, quando o processamento de uma lista de itens em um motor de templates, mover o loop para o modelo e anexar todos os itens para o DOM em uma operação.</p>
+
+    <p>Exemplo:</p>
+
+    <b>for (i in collection) {}</b>
+    <p>&nbsp;</p>
 
     <p>Problemas de processamento também pode ser capturada por ferramentas dev do Chrome e a partir da versão 27, o Firefox pode agora funções que desencadeiam um refluxo de log !</p>
 
@@ -45,13 +55,13 @@
 
     <p>Perfil e melhorar a lógica. Enxágüe e repita</p>
 
-    <p>Então você fez todas estas verificações e você percebeu que o JavaScript é realmente o que faz com que seu aplicativo para executar mal.</p>
+    <p>Então você fez todas estas verificações e você percebeu que o JavaScript é realmente o que faz com que seu aplicativo executar mal.</p>
 
-    <p>Nice, a minha parte favorita do processo de otimização começa aqui! Você precisa o perfil de seu aplicativo.</p>
+    <p>Ótimo, a minha parte favorita do processo de otimização começa aqui! Você precisa saber qual é o perfil de seu aplicativo.</p>
 
     <p>Pegue o seu navegador moderno. Inicie o profiler então o seu aplicativo e interagir com ele como um usuário normal faria. Depois de um tempo, parar o profiler.</p>
 
-    <p>Agora você pode navegar para os mais freqüentemente chamados de funções. Se você estiver usando encerramentos ou funções geradas, certifique-se de nomeá-los para obter resultados significativos.</p>
+    <p>Agora você pode navegar para os mais freqüentemente chamados de funções. Se você estiver usando encerramentos ou funções dinâmicas, certifique-se de nomeá-los para obter resultados significativos.</p>
 
     <p>Agora, ter um olhar para a lógica das chamadas. Há certamente espaço para a otimização. Os erros mais comuns incluem:</p>
 
@@ -59,7 +69,7 @@
         <li>Chamar uma função muitas vezes, onde o resultado pode ser armazenado em cache e reutilizados.</li>
         <li>Laços profundamente aninhadas.</li>
         <li>Iteração muitas vezes quando você poderia parar a iteração prematuramente.</li>
-        <li>Você também precisa o perfil da memória utilizada e rastrear vazamento potencial ou coletas de lixo pesados.</li>
+        <li>Você também precisa verificar o <i>profiler</i> da memória utilizada e rastrear vazamento potencial ou coletas de lixo pesados.</li>
     </ul>
 
     <p>Ao operar ao nível da lógica de código, você pode melhorar a velocidade de sua aplicação. As correções aplicadas aqui não estão diretamente relacionados com a linguagem JavaScript, mas sim com a lógica do seu código.</p>
@@ -76,7 +86,9 @@
 
     <p>Confie no VM.</p>
 
-    <p>A segunda coisa é usar uma sintaxe alternativa JavaScript no seu código é provável que nunca tenha qualquer impacto significativo na velocidade. Esta crença remonta desde o tempo dos navegadores não tinha um JIT. Naquela época, o uso de diferentes sintaxes pode fazer a diferença. Este tipo de declarações floresceu pela web:</p>
+    <p>A segunda coisa é usar uma sintaxe alternativa JavaScript no seu código é provável que nunca tenha qualquer impacto significativo na velocidade.
+        Esta crença remonta desde o tempo dos navegadores não tinham um JIT.
+        Naquela época, o uso de diferentes sintaxes pode fazer a diferença. Este tipo de declarações floresceu pela web:</p>
 
     <ul>
         <li>se são mais rápidos do interruptor.</li>
@@ -84,9 +96,10 @@
         <li>juntar matriz para fazer cordas concatenação</li>
     </ul>
 
-    <p>Optimizar JavaScript não é sobre a sintaxe. Você não pode basear uma estratégia de otimização em sintaxe reescrever só. Você vai acabar perdendo o seu tempo e obter um pouco ou nenhum resultado. Eu não estou nem mesmo mencionar o impacto sobre a legibilidade ea manutenção do seu código.</p>
+    <p><i>Optimizar JavaScript não é sobre a sintaxe.</i> Você não pode basear uma estratégia de otimização em sintaxe reescrever só. Você vai acabar perdendo o seu tempo e obter um pouco ou nenhum resultado. Eu não estou nem mesmo mencionar o impacto sobre a legibilidade ea manutenção do seu código.</p>
 
-    <p>Além disso, VM estão em constante evolução. O melhor desempenho de hoje talvez não amanhã. Implementadores VM ter o código do mundo real para ver o que os desenvolvedores fazem e quais os padrões para otimizar. Usando a sintaxe estranho é provável que nunca ser otimizado. Basta escrever o seu código de uma maneira que faz sentido e que deve ser suficiente.</p>
+    <p>Além disso, VM estão em constante evolução. O melhor desempenho de hoje talvez não amanhã. Implementadores VM ter o código do mundo real para ver o que os desenvolvedores fazem e quais os padrões para otimizar. Usando a sintaxe estranho é provável que nunca ser otimizado.
+        Basta escrever o seu código de uma maneira que faz sentido e que deve ser suficiente.</p>
 
 
     <h3 class="topic">Finalmente, você está pronto para otimizar JavaScript</h3>
