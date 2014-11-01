@@ -1,0 +1,181 @@
+﻿<html>
+<head>
+    <title>Rogério</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background: #000;
+            padding: 62px 0 0 0;
+        }
+        h1 {
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 3em;
+            margin: 0 auto;
+            width: 800px;
+            padding-top: 120px;
+            text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
+        }
+        h1 span {
+            font-size: 2em;
+        }
+        .cenario {
+            background: #000 url("bg.jpg") repeat-x center;
+            position: relative;
+            width: 100%;
+            height: 820px;
+        }
+        .personagem {
+            width: 146px;
+            height: 339px;
+            position: absolute;
+            bottom: 60px;
+            left: 25%;
+            background: url("rogerio.png") repeat-x center;
+        }
+
+        #frase {
+            color: #EEEEEF;
+            font-family: 'Raleway', sans-serif;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            font-size: 22px;
+            width: auto;
+            max-width: 600px;
+            padding: 5px;
+            background: rgba(141, 176, 127, 0.5);
+            border-radius: 5px;
+            text-shadow: 3px 1px 2px rgba(150, 150, 150, 1);
+        }
+
+        #botao {
+            text-decoration: none;
+            color: #fff;
+            font-family: arial;
+            margin: 0 auto;
+            width: 200px;
+            text-align: center;
+            position: absolute;
+            bottom: 209px;
+            left: 40%;
+        }
+
+        .button {
+            box-shadow:inset 0px 1px 0px 0px #f5978e;
+            background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+            background-color:#f24537;
+            border-radius:6px;
+            border:1px solid #d02718;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #810e05;
+        }
+        .button:hover {
+            background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+            background-color:#c62d1f;
+        }
+        .button:active {
+            position:relative;
+            top:581px;
+        }
+
+        .efeito{
+          -webkit-animation: animationFrames ease 1s;
+          -webkit-animation-iteration-count: 1;
+          -webkit-transform-origin: 50% 50%;
+          -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+        }
+
+        @-webkit-keyframes animationFrames {
+          0% {
+            opacity:0;
+            -webkit-transform:  translate(0px,-25px)  ;
+          }
+          100% {
+            opacity:1;
+            -webkit-transform:  translate(0px,0px)  ;
+          }
+        }
+    </style>
+</head>
+<body>
+    <section class="cenario">
+    <h1>Gerador de frases do <span>Rogério.</span></h1>
+        <span class="personagem"></span>
+
+        <p id="frase" class="efeito"></p>
+
+        <a href="javascript:void(0);" id="botao" class="button">Gerar nova frase.</a>
+        <div><figure></figure></div>
+    </section>
+
+    <script type="text/javascript">
+        var frases = [
+                'Resolvi dar um migué — com Alexandre Capozzoli.',
+                'A FNAC me mandou um email com o título "Seu notebook está aqui!". Mentirosos filhos da peste. Acabei de olhar e ele tá aqui na escrivaninha. Que feio, FNAC, simulando sequestro, né? To esperto.',
+                'Ficar 24 horas com fios aparelhos de monitoramento cardíaco é tipo estar sendo abraçado o todo tempo por alguém que você não gosta, tipo o Alvaro Leme ou o José Serra.',
+                'Quando o mundo fica pequeno, eu peço ajuda aos amigos. Canta aí pra mim, Nat.',
+                'Esse Facebook tá tão legal que o Brasil devia perder uma Copa toda semana.',
+                'Eu IMPLORO que, num gol da Grécia, os jogadores não se beijem. Não estou pronto pra ver beijo grego na TV.',
+                'Meu nome é Zé Pequeno.',
+                'Corinthians levou 104 anos pra perder em casa. Devia ir pro Livro dos Recordes.',
+                'Da série "pelamordedeus coloquem de volta Filosofia e Sociologia nos cursos de Publicidade."',
+                'Fiquei num chalé que tinha repelente de morcego. Chupa essa, Bruce Wayne.',
+                'Em 1990 eu cursava a 5ª série. Tive que decorar os nomes das 13 Capitanias Hereditárias. Lá se foram 24 anos. Eu ainda não usei isso pra nada.',
+                'Se você acha São Paulo uma merda, não perca mais tempo: volte pra sua cidade. ‪#‎sampa460‬',
+                'Joga bebê no lixo, golpe do baú, mata enfermeira, cega o marido, traições. E a novela chama AMOR À VIDA. Certinho.',
+                'Tá tanto calor em São Paulo que a Av. Água Espraiada acabou de entrar em ebulição.',
+                'Eu queria que todas as pessoas do planeta pudessem ter amigos tão incríveis quanto os meus. SÓ gente nota mil!',
+                'AGORA PARE! Pegue no compasso!',
+                'A todos que chegaram atrasados à prova do ENEM, deixo aqui o meu muito bem feito. Saíssem antes.',
+                'Essa geração Y precisa mesmo é de Merthiolate que arde no machucado.',
+                'Cacete. Acabei de chamar o chapeiro do restaurante de "meu chapa". E juro que foi sem querer.',
+                'Mais um trabalho publicado: capa do livro de Seth Godin "A Ilusão de Ícaro", para a Editora Campus Elsevier.',
+                'CACETA! Bati o olho e achei que era algo sobre a Bruxa do 71.',
+                'No dia 8 de março não dê bombonzinho nem florzinha. Dê mais respeito que já tá bom.',
+                'Queijos são chocolates salgados.',
+                'Mano... tão falando do fim do mundo como se não houvesse amanhã.',
+                'SEIS mulheres no mesmo ônibus lendo os 50 Tons de Cinza. Nem num culto da Universal do Reino de Deus tem tanta gente assim com a Bíblia.',
+                'Tinha um casting de modelos na frente do prédio quando cheguei. Todas juntas deviam pesar 25 quilos. Tinha 40, mais ou menos.',
+                '30 anos depois e o sofá é o mesmo (só mudou de capa), o cobertor é o mesmo, a girafa satânica morreu. Eu, digamos, tou um pouquinho maior... Julho de 2012.',
+                'Me sinto muito protegido e seguro quando o motorista do ônibus lê jornal enquanto conduz o veículo...',
+                'Um novo dia deveria ter o mesmo valor de um novo ano. Feliz domingo.',
+                'Impressionante como a galerinha que quer ser diferente fica sempre tudo igual, né?',
+                'Gente, vamos falar de coisa boa? Iogurteira Top Term...',
+                'Eu aceito mais existir um Rock in Rio Lisboa do que um Rock in Rio sem rock.',
+                'Quem será a sograh da Norah Jones?',
+                'Daqui a pouco a Samsung processa a Apple dizendo que o presidente deles era gay antes do Tim Cook.'
+            ];
+
+            var novaFrase = function() {
+                var total = frases.length,
+                    sorteada = Math.floor(Math.random() * total),
+                    frase = document.getElementById("frase");
+
+                //sorteia a frase
+                frase.innerHTML = frases[sorteada]
+
+                frase.classList.remove("efeito");
+                frase.offsetWidth = frase.offsetWidth;
+
+                frase.className += "efeito";
+            };
+
+            document.getElementById("botao").addEventListener("click", function(){
+                novaFrase();
+            });
+
+            novaFrase();
+    </script>
+</body>
+</html>
